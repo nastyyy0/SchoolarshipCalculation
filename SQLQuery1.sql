@@ -1,0 +1,2 @@
+﻿Select id_schoolarship, fio as 'Студент',     type_s as 'Тип',    schoolarship.date_cr as 'Дата выдачи' , summ as 'Сумма по приказу',  gpa as 'Средний балл', cof as 'Коэффициент',
+cof*118+summ as 'Стипендия' from (schoolarship inner join student on  schoolarship.id_student=student.id_student) inner join grade on grade.id_student=student.id_student
